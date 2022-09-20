@@ -16,8 +16,8 @@ public class Student {
     public DateTime GraduationDate {get; set;}
 
 
-    public string toString(){
-        throw new NotImplementedException();
+    public override string ToString(){
+        return $"Name: {GivenName}, Surname: {SurName}, Status: {status}";
     }
 
 
@@ -36,6 +36,7 @@ public class Student {
         }
         return Status.Active;
     }
+
 
 
 

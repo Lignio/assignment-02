@@ -19,10 +19,12 @@ public class StudentTests
         };
 
 
-
-
-        //Act   
+        //Act  
+        var check = student.ToString(); 
 
         //Assert
+        check.Should().Be("Name: Ole, Surname: Olesen, Status: Active");
+
     }
+
 }
