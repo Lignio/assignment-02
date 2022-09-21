@@ -12,11 +12,7 @@ public class DelegatesTests
 
         check.Should().Be(15);
        
-        Func<string, string> reverse = str => new string(str.Reverse().ToArray());
-
-        var check1 = reverse("a string");
-
-        check1.Should().Be("gnirts a");
+        Action<string> reverse = str => Console.WriteLine(new string(str.Reverse().ToArray()));
 
 
         Func<string, int, bool> isEqual = (str, number) => int.Parse(str) == number;
